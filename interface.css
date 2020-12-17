@@ -10,7 +10,7 @@ ul.nav>li a {
   display: block;
   padding: 8px;
   text-align: center;
-  background-color: #555;
+  background-color: #555555;
 }
 ul.nav>li a:hover {
   background-color: #111;
