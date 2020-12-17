@@ -5,13 +5,11 @@ ul.nav {
 }
 ul.nav>li {
   float: left;
-  background-color: #333;
 }
 ul.nav>li a {
   display: block;
   padding: 8px;
   text-align: center;
-  background-color: #333;
   color: white;
 }
 ul.nav>li a:hover {
