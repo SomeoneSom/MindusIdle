@@ -31,7 +31,7 @@ function saveLoad() {
   var resources = JSON.parse(window.localStorage['resources']);
   var drills = JSON.parse(window.localStorage['drills']);
 }
-if (window.localStorage['resources']) {
+if (typeof(window.localStorage['resources']) == undefined) {
   wipeSave();
 }
 saveLoad();
