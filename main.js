@@ -28,8 +28,8 @@ function wipeSave() {
   window.localStorage['drills'] = JSON.stringify({"mech":0});
 }
 function saveLoad() {
-  var globalThis.resources = JSON.parse(window.localStorage['resources']);
-  var globalThis.drills = JSON.parse(window.localStorage['drills']);
+  var window.resources = JSON.parse(window.localStorage['resources']);
+  var window.drills = JSON.parse(window.localStorage['drills']);
 }
 if (typeof(window.localStorage['resources']) == undefined) {
   wipeSave();
