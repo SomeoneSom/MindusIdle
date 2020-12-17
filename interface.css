@@ -12,7 +12,7 @@ ul.nav>li a {
   padding: 8px;
   color: white;
   text-align: center;
-  background-color: #dddddd;
+  background-color: #333;
 }
 ul.nav>li a:hover {
   background-color: #111;
