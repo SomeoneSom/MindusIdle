@@ -16,6 +16,7 @@ ul.nav>li a {
   text-align: center;
   color: white;
   background-color: #555555;
+  text-decoration: none;
 }
 ul.nav>li a:hover {
   background-color: #111;
