@@ -35,3 +35,6 @@ if (typeof(window.localStorage['resources']) == undefined) {
   wipeSave();
 }
 saveLoad();
+window.setInterval(function(){
+  document.getElementById("copperres").innerHTML = toString(resources.copper)
+}, 1000);
