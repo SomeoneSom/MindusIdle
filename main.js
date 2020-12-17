@@ -24,14 +24,14 @@ function colorA(divname) {
 enableDiv("res");
 colorA("res");
 function wipeSave() {
-  window.localstorage['resources'] = JSON.stringify({"copper":12});
-  window.localstorage['drills'] = JSON.stringify({"mech":0});
+  window.localStorage['resources'] = JSON.stringify({"copper":12});
+  window.localStorage['drills'] = JSON.stringify({"mech":0});
 }
 function saveLoad() {
-  var resources = JSON.parse(window.localstorage['resources']);
-  var drills = JSON.parse(window.localstorage['drills']);
+  var resources = JSON.parse(window.localStorage['resources']);
+  var drills = JSON.parse(window.localStorage['drills']);
 }
-if (window.localstorage['resources']) {
+if (window.localStorage['resources']) {
   wipeSave();
 }
 saveLoad();
