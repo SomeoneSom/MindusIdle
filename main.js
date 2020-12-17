@@ -40,3 +40,6 @@ saveLoad();
 window.setInterval(function(){
   //pass, will be changed later
 }, 1000);
+window.setInterval(function(){
+  document.getElementById("copperres").innerHTML = resources.copper.toString(10);
+}, 100);
