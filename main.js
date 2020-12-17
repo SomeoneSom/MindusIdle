@@ -11,4 +11,3 @@ function enableDiv(divname) {
   }
 }
 enableDiv("res");
-alert("test");
