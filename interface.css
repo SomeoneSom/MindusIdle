@@ -7,14 +7,14 @@ ul.nav {
 ul.nav>li {
   float: left;
 }
-ul.nav>li a {
+ul.nav>li>a {
   display: block;
   padding: 8px;
   color: white;
   text-align: center;
   background-color: #dddddd;
 }
-ul.nav>li a:hover {
+ul.nav>li>a:hover {
   background-color: #111;
 }
 .active {
