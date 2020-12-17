@@ -10,6 +10,7 @@ ul.nav {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  position: sticky;
 }
 ul.nav>li {
   float: left;
