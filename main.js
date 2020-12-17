@@ -13,7 +13,7 @@ function enableDiv(divname) {
 function colorA(divname) {
   for (var j = 0; j < divs.length; j++) {
     var divtag = divs[j];
-    var div = document.getElementsByClassName(divtag);
+    var div = document.getElementsByClassName(divtag)[0];
     if (divname == divtag) {
       div.style.color = "orange";
     } else {
