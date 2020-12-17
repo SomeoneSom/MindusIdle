@@ -1,4 +1,6 @@
 var divs = ["res", "shop", "upg", "land"];
+var resources;
+var drills;
 function enableDiv(divname) {
   for (var j = 0; j < divs.length; j++) {
     var divtag = divs[j];
@@ -28,8 +30,8 @@ function wipeSave() {
   window.localStorage['drills'] = JSON.stringify({"mech":0});
 }
 function saveLoad() {
-  var window.resources = JSON.parse(window.localStorage['resources']);
-  var window.drills = JSON.parse(window.localStorage['drills']);
+  resources = JSON.parse(window.localStorage['resources']);
+  drills = JSON.parse(window.localStorage['drills']);
 }
 if (typeof(window.localStorage['resources']) == undefined) {
   wipeSave();
