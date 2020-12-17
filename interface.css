@@ -10,11 +10,10 @@ ul.nav>li a {
   display: block;
   padding: 8px;
   text-align: center;
-  color: white;
 }
 ul.nav>li a:hover {
   background-color: #111;
 }
-li.active {
+.active {
   background-color: #33FF00;
 }
