@@ -2,6 +2,10 @@
   font-family: 'Mindusfont';
   src: url('notmyfontistolethisfromanukesgithub.ttf');
 }
+* {
+  font-family: 'Mindusfont';
+  background-color: #555555
+}
 ul.nav {
   list-style-type: none;
   margin: 0;
@@ -9,6 +13,8 @@ ul.nav {
 }
 ul.nav>li {
   float: left;
+  border-left: 1px solid #bbb;
+  border-right: 1px solid #bbb;
 }
 ul.nav>li a {
   display: block;
@@ -20,7 +26,4 @@ ul.nav>li a {
 }
 ul.nav>li a:hover {
   background-color: #111;
-}
-* {
-  font-family: 'Mindusfont';
 }
