@@ -23,3 +23,15 @@ function colorA(divname) {
 }
 enableDiv("res");
 colorA("res");
+function wipeSave() {
+  window.localstorage['resources'] = JSON.stringify({"copper":12});
+  window.localstorage['drills'] = JSON.stringify({"mech":0});
+}
+function saveLoad() {
+  var resources = JSON.parse(window.localstorage['resources']);
+  var drills = JSON.parse(window.localstorage['drills']);
+}
+if (window.localstorage['resources']) {
+  wipeSave();
+}
+saveLoad();
