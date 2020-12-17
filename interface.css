@@ -1,1 +1,19 @@
-
+ul.nav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul.nav>li {
+  float: left;
+}
+ul.nav>li a {
+  display: block;
+  padding: 8px;
+  background-color: #dddddd;
+}
+ul.nav>li a:hover {
+  background-color: #111;
+}
+.active {
+  background-color: #4CAF50;
+}
