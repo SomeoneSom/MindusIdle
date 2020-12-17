@@ -10,9 +10,11 @@ ul.nav>li {
 ul.nav>li a {
   display: block;
   padding: 8px;
-  color: white;
   text-align: center;
   background-color: #333;
+}
+ul.nav>li>a {
+  color: white;
 }
 ul.nav>li a:hover {
   background-color: #111;
