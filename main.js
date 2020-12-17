@@ -29,14 +29,14 @@ function wipeSave() {
   window.localStorage['resources'] = JSON.stringify({"copper":12});
   window.localStorage['drills'] = JSON.stringify({"mech":0});
 }
-function saveLoad() {
+function loadSave() {
   resources = JSON.parse(window.localStorage['resources']);
   drills = JSON.parse(window.localStorage['drills']);
 }
 if (typeof(window.localStorage['resources']) == undefined) {
   wipeSave();
 }
-saveLoad();
+loadSave();
 window.setInterval(function(){
   //pass, will be changed later
 }, 1000);
