@@ -29,9 +29,9 @@ function selectImg(imgName) {
     var imgtag = imgs[j];
     var img = document.getElementsByClassName(imgtag)[0];
     if (imgName == imgtag) {
-      div.style.border = "1px solid white";
+      img.style.border = "1px solid white";
     } else {
-      div.style.border = "none";
+      img.style.border = "none";
     }
   }
 }
