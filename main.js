@@ -1,4 +1,4 @@
-var divs = ["res", "shop", "upg", "land"];
+var divs = ["res", "drshop", "crshop", "upg", "land"];
 var resources;
 var drills;
 function enableDiv(divname) {
