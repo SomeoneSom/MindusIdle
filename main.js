@@ -27,7 +27,7 @@ function colorA(divname) {
 function selectImg(imgName) {
   for (var j = 0; j < imgs.length; j++) {
     var imgtag = imgs[j];
-    var img = document.getElementById(imgtag)[0];
+    var img = document.getElementById(imgtag);
     if (imgName == imgtag) {
       img.style.border = "1px solid white";
     } else {
