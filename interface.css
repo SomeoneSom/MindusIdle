@@ -5,7 +5,8 @@
 * {
   font-family: 'Mindusfont';
   color: white;
-  background-color: #444
+  background-color: #444;
+  line-height: 1.2em;
 }
 ul.nav {
   list-style-type: none;
