@@ -1,4 +1,5 @@
 var divs = ["res", "drshop", "crshop", "upg", "land"];
+var imgs = ["coppimg", "leadimg"];
 var resources;
 var drills;
 function enableDiv(divname) {
@@ -23,8 +24,20 @@ function colorA(divname) {
     }
   }
 }
+function selectImg(imgName) {
+  for (var j = 0; j < imgs.length; j++) {
+    var imgtag = imgs[j];
+    var img = document.getElementsByClassName(imgtag)[0];
+    if (imgName == imgtag) {
+      div.style.border = "1px solid white";
+    } else {
+      div.style.border = "none";
+    }
+  }
+}
 enableDiv("res");
 colorA("res");
+selectImg("coppimg");
 function wipeSave() {
   window.localStorage['resources'] = JSON.stringify({"copper":12});
   window.localStorage['drills'] = JSON.stringify({"mech":0});
