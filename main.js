@@ -1,5 +1,5 @@
 var divs = ["res", "drshop", "crshop", "upg", "land"];
-var imgs = ["coppimg", "leadimg"];
+var imgs = ["coppimg", "leadimg", "scrpimg", "sandimg", "coalimg", "titaimg", "thorimg"];
 var resources;
 var drills;
 function enableDiv(divname) {
