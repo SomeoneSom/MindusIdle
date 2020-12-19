@@ -1,5 +1,5 @@
 var divsmain = ["res", "drshop", "crshop", "upg", "land"];
-var divscr = ["mech", "pneu", "lasr", "arbl"]
+var divsdr = ["mech", "pneu", "lasr", "arbl"]
 var imgs = ["coppimg", "leadimg", "scrpimg", "sandimg", "coalimg", "titaimg", "thorimg"];
 var resources;
 var drills;
@@ -36,8 +36,8 @@ function selectImg(imgName) {
     }
   }
 }
-enableDiv("mech", divscr);
-colorA("mech", divscr);
+enableDiv("mech", divsdr);
+colorA("mech", divsdr);
 enableDiv("res", divsmain);
 colorA("res", divsmain);
 selectImg("coppimg");

@@ -12,7 +12,6 @@ ul.nav {
   margin: 0;
   padding: 0;
   position: sticky;
-  overflow: auto;
 }
 ul.nav>li {
   float: left;
@@ -28,4 +27,27 @@ ul.nav>li a {
 }
 ul.nav>li a:hover {
   background-color: #111;
+}
+ul.drnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 12%
+  position: sticky;
+  overflow: auto;
+}
+ul.drnav>li a {
+  display: block;
+  padding: 8px
+  text-align: center;
+  color: white;
+  background-color: #555;
+  text-decoration: none;
+}
+ul.drnav> li a:hover {
+  background-color: #111;
+}
+div.drshop>div {
+  margin-left: 12%;
+  padding: 1px 16px;
 }
