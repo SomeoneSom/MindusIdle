@@ -18,10 +18,7 @@ ul.nav>li {
   float: left;
   border-right: 1px solid #444;
 }
-ul.crnav>li {
-  border-bottom: 1px solid #444;
-}
-ul.nav>li a ul.crnav>li a{
+ul.nav>li a {
   display: block;
   padding: 8px;
   text-align: center;
@@ -29,6 +26,6 @@ ul.nav>li a ul.crnav>li a{
   background-color: #555;
   text-decoration: none;
 }
-ul.nav>li a:hover ul.crnav>li a:hover {
+ul.nav>li a:hover {
   background-color: #111;
 }
