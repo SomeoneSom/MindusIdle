@@ -7,17 +7,21 @@
   color: white;
   background-color: #444;
 }
-ul.nav {
+ul.nav ul.crnav {
   list-style-type: none;
   margin: 0;
   padding: 0;
   position: sticky;
+  overflow: auto;
 }
 ul.nav>li {
   float: left;
-  border-right: 1px solid #444
+  border-right: 1px solid #444;
 }
-ul.nav>li a {
+ul.crnav>li {
+  border-bottom: 1px solid #444;
+}
+ul.nav>li a ul.crnav>li a{
   display: block;
   padding: 8px;
   text-align: center;
@@ -25,6 +29,6 @@ ul.nav>li a {
   background-color: #555;
   text-decoration: none;
 }
-ul.nav>li a:hover {
+ul.nav>li a:hover ul.crnav>li a:hover {
   background-color: #111;
 }

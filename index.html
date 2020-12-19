@@ -14,11 +14,11 @@
 </head>
 <body>
   <ul class="nav">
-    <li><a href="javascript:enableDiv('res'); colorA('res');" class="res">Resources</a></li>
-    <li><a href="javascript:enableDiv('drshop'); colorA('drshop');" class="drshop">Drill Shop</a></li>
-    <li><a href="javascript:enableDiv('crshop'); colorA('crshop');" class="crshop">Crafting Shop</a></li>
-    <li><a href="javascript:enableDiv('upg'); colorA('upg');" class="upg">Upgrades</a></li>
-    <li><a href="javascript:enableDiv('land'); colorA('land');" class="land">Land</a></li>
+    <li><a href="javascript:enableDiv('res', divsmain); colorA('res', divsmain);" class="res">Resources</a></li>
+    <li><a href="javascript:enableDiv('drshop', divsmain); colorA('drshop', divsmain);" class="drshop">Drill Shop</a></li>
+    <li><a href="javascript:enableDiv('crshop', divsmain); colorA('crshop', divsmain);" class="crshop">Crafting Shop</a></li>
+    <li><a href="javascript:enableDiv('upg', divsmain); colorA('upg', divsmain);" class="upg">Upgrades</a></li>
+    <li><a href="javascript:enableDiv('land', divsmain); colorA('land', divsmain);" class="land">Land</a></li>
   </ul>
   <div id="res"><br />
     <p><span id="copperres">0</span> Copper</p>
@@ -30,10 +30,25 @@
     <img src="img/item-sand.png" onclick="selectImg('sandimg');" id="sandimg" />
     <img src="img/item-coal.png" onclick="selectImg('coalimg');" id="coalimg" />
     <img src="img/item-titanium.png" onclick="selectImg('titaimg');" id="titaimg" />
-    <img src="img/item-thorium.png" onclick="selectImg('thorimg');" id="thorimg" /><br /><br />
-    <img src="img/drill-mechanical.png" /><p> You have: <span id="mechamount">0</span></p>
-    <button onclick="buyMech(1)">Buy 1</button><button onclick="buyMech(maxA('mech'))">Buy <span id="mechmax">0</span></button><br />
-    <p>Cost: <span id="mechcoppercost">0</span> Copper <span id="mechlandcost">0</span> Land</p><br />
+    <img src="img/item-thorium.png" onclick="selectImg('thorimg');" id="thorimg" /><br />
+    <ul class="crnav">
+      <li><a href="javascript:enableDiv('mech', divscr); colorA('mech', divscr);" class="mech">Mechanical Drill</a></li>
+      <li><a href="javascript:enableDiv('pneu', divscr); colorA('pneu', divscr);" class="pneu">Pneumatic Drill</a></li>
+      <li><a href="javascript:enableDiv('lasr', divscr); colorA('lasr', divscr);" class="lasr">Laser Drill</a></li>
+      <li><a href="javascript:enableDiv('arbl', divscr); colorA('arbl', divscr);" class="arbl">Airblast Drill</a></li>
+    </ul>
+    <div id="mech">
+      <p>Mech Not ready yet</p>
+    </div>
+    <div id="pneu">
+      <p>Pneu Not ready yet</p>
+    </div>
+    <div id="lasr">
+      <p>Lasr Not ready yet</p>
+    </div>
+    <div id="arbl">
+      <p>Arbl Not ready yet</p>
+    </div>
   </div>
   <div id="crshop"><br />
     <p>Crafting Shop not ready yet</p>

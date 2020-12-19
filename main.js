@@ -1,8 +1,9 @@
-var divs = ["res", "drshop", "crshop", "upg", "land"];
+var divsmain = ["res", "drshop", "crshop", "upg", "land"];
+var divscr = ["mech", "pneu", "lasr", "arbl"]
 var imgs = ["coppimg", "leadimg", "scrpimg", "sandimg", "coalimg", "titaimg", "thorimg"];
 var resources;
 var drills;
-function enableDiv(divname) {
+function enableDiv(divname, divs) {
   for (var j = 0; j < divs.length; j++) {
     var divtag = divs[j];
     var div = document.getElementById(divtag);
@@ -13,7 +14,7 @@ function enableDiv(divname) {
     }
   }
 }
-function colorA(divname) {
+function colorA(divname, divs) {
   for (var j = 0; j < divs.length; j++) {
     var divtag = divs[j];
     var div = document.getElementsByClassName(divtag)[0];
@@ -35,8 +36,10 @@ function selectImg(imgName) {
     }
   }
 }
-enableDiv("res");
-colorA("res");
+enableDiv("mech", divscr);
+colorA("mech", divscr);
+enableDiv("res", divsmain);
+colorA("res", divsmain);
 selectImg("coppimg");
 function wipeSave() {
   window.localStorage['resources'] = JSON.stringify({"copper":12});
