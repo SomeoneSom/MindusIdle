@@ -1,3 +1,3 @@
 # MindusIdle
 Idle game based on Mindustry
-Check it out at someonesom.github.io/MindusIdle !
+Check it out [here](https://someonesom.github.io/MindusIdle)!
