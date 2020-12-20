@@ -32,7 +32,6 @@ ul.drnav {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 12%
   position: sticky;
   overflow: auto;
 }
@@ -48,6 +47,5 @@ ul.drnav> li a:hover {
   background-color: #111;
 }
 div.drshop>div {
-  margin-left: 12%;
   padding: 1px 16px;
 }
