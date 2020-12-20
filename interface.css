@@ -35,6 +35,9 @@ ul.drnav {
   position: sticky;
   overflow: auto;
 }
+ul.drnav>li {
+  border-bottom: 1px solid #444;
+}
 ul.drnav>li a {
   display: block;
   padding: 8px
