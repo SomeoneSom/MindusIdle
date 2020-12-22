@@ -36,19 +36,16 @@ ul.drnav {
   overflow: auto;
 }
 ul.drnav>li {
+  float: left;
   border-bottom: 1px solid #444;
 }
 ul.drnav>li a {
   display: block;
-  padding-top: 8px;
-  text-align: center;
+  padding: 8px;
   color: white;
   background-color: #555;
   text-decoration: none;
 }
 ul.drnav> li a:hover {
   background-color: #111;
-}
-div.drshop>div {
-  padding: 1px 16px;
 }
