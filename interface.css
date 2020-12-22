@@ -21,7 +21,6 @@ ul.nav>li a {
   display: block;
   padding: 8px;
   text-align: center;
-  color: white;
   background-color: #555;
   text-decoration: none;
 }
@@ -42,7 +41,6 @@ ul.drnav>li {
 ul.drnav>li a {
   display: block;
   padding: 8px;
-  color: white;
   background-color: #555;
   text-decoration: none;
 }

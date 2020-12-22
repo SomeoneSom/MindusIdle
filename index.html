@@ -15,11 +15,11 @@
 </head>
 <body>
   <ul class="nav">
-    <li><a onclick="javascript:enableDiv('res', divsmain);colorA('res', divsmain);" class="res">Resources</a></li>
-    <li><a onclick="javascript:enableDiv('drshop', divsmain);colorA('drshop', divsmain);" class="drshop">Drill Shop</a></li>
-    <li><a onclick="javascript:enableDiv('crshop', divsmain);colorA('crshop', divsmain);" class="crshop">Crafting Shop</a></li>
-    <li><a onclick="javascript:enableDiv('upg', divsmain);colorA('upg', divsmain);" class="upg">Upgrades</a></li>
-    <li><a onclick="javascript:enableDiv('land', divsmain);colorA('land', divsmain);" class="land">Land</a></li>
+    <li><a onclick="enableDiv('res', divsmain);colorA('res', divsmain);" class="res">Resources</a></li>
+    <li><a onclick="enableDiv('drshop', divsmain);colorA('drshop', divsmain);" class="drshop">Drill Shop</a></li>
+    <li><a onclick="enableDiv('crshop', divsmain);colorA('crshop', divsmain);" class="crshop">Crafting Shop</a></li>
+    <li><a onclick="enableDiv('upg', divsmain);colorA('upg', divsmain);" class="upg">Upgrades</a></li>
+    <li><a onclick="enableDiv('land', divsmain);colorA('land', divsmain);" class="land">Land</a></li>
   </ul>
   <div id="res"><br />
     <p><span id="copperres">0</span> Copper</p>
@@ -33,10 +33,10 @@
     <img src="img/item-titanium.png" onclick="selectImg('titaimg');" id="titaimg" />
     <img src="img/item-thorium.png" onclick="selectImg('thorimg');" id="thorimg" /><br />
     <ul class="drnav">
-      <li><a onclick="javascript:enableDiv('mech', divsdr);colorA('mech', divsdr);" class="mech">Mechanical Drill</a></li>
-      <li><a onclick="javascript:enableDiv('pneu', divsdr);colorA('pneu', divsdr);" class="pneu">Pneumatic Drill</a></li>
-      <li><a onclick="javascript:enableDiv('lasr', divsdr);colorA('lasr', divsdr);" class="lasr">Laser Drill</a></li>
-      <li><a onclick="javascript:enableDiv('arbl', divsdr);colorA('arbl', divsdr);" class="arbl">Airblast Drill</a></li>
+      <li><a onclick="enableDiv('mech', divsdr);colorA('mech', divsdr);" class="mech">Mechanical Drill</a></li>
+      <li><a onclick="enableDiv('pneu', divsdr);colorA('pneu', divsdr);" class="pneu">Pneumatic Drill</a></li>
+      <li><a onclick="enableDiv('lasr', divsdr);colorA('lasr', divsdr);" class="lasr">Laser Drill</a></li>
+      <li><a onclick="enableDiv('arbl', divsdr);colorA('arbl', divsdr);" class="arbl">Airblast Drill</a></li>
     </ul>
     <div id="mech">
       <p>You have <span id="mechcount">0</span> Mechanical Drills</p>
@@ -61,6 +61,5 @@
     <p>Land not ready yet</p>
   </div>
   <script type="text/javascript" src="main.js"></script>
-  <script type="text/javascript" src="jQscr.js"></script>
 </body>
 </html>
