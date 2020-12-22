@@ -42,7 +42,7 @@ enableDiv("res", divsmain);
 colorA("res", divsmain);
 selectImg("coppimg");
 function wipeSave() {
-  window.localStorage['resources'] = JSON.stringify({"copper":12});
+  window.localStorage['resources'] = JSON.stringify({"copper":12, "land":10});
   window.localStorage['drills'] = JSON.stringify({"mech":0});
 }
 function loadSave() {
@@ -58,4 +58,6 @@ window.setInterval(function(){
 }, 1000);
 window.setInterval(function(){
   document.getElementById("copperres").innerHTML = resources.copper.toString(10);
+  document.getElementById("landcount").innerHTML = resources.land.toString(10);
+  document.getElementById("mechcount").innerHTML = drills.mech.toString(10);
 }, 100);
