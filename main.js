@@ -41,23 +41,28 @@ colorA("mech", divsdr);
 enableDiv("res", divsmain);
 colorA("res", divsmain);
 selectImg("coppimg");
+//obj format: [count, cost, output]
 function wipeSave() {
   window.localStorage['resources'] = JSON.stringify({"copper":12, "land":10});
-  window.localStorage['drills'] = JSON.stringify({"mech":0});
+  window.localStorage['obj'] = JSON.stringify({"mech":[0, [12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]});
 }
 function loadSave() {
   resources = JSON.parse(window.localStorage['resources']);
-  drills = JSON.parse(window.localStorage['drills']);
+  obj = JSON.parse(window.localStorage['obj']);
 }
 if (typeof(window.localStorage['resources']) == undefined) {
   wipeSave();
 }
 loadSave();
+//nums go up here
 window.setInterval(function(){
-  //pass, will be changed later
+  //pass
 }, 1000);
+//building and res counts change here
 window.setInterval(function(){
   document.getElementById("copperres").innerHTML = resources.copper.toString(10);
   document.getElementById("landcount").innerHTML = resources.land.toString(10);
-  document.getElementById("mechcount").innerHTML = drills.mech.toString(10);
+  for (var i = 0; i < obj.length; i++) {
+    document.getElementById(i.toString(10).concat("count")).innerHTML = obj[Object.keys(obj)[i]][0].toString(10);
+  }
 }, 100);

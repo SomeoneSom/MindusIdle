@@ -21,10 +21,10 @@
     <li><a onclick="enableDiv('upg', divsmain);colorA('upg', divsmain);" class="upg">Upgrades</a></li>
     <li><a onclick="enableDiv('land', divsmain);colorA('land', divsmain);" class="land">Land</a></li>
   </ul>
-  <div id="res"><br />
+  <div id="res">
     <p><span id="copperres">0</span> Copper</p>
   </div>
-  <div id="drshop"><br /><br />
+  <div id="drshop">
     <img src="img/item-copper.png" onclick="selectImg('coppimg');" id="coppimg" />
     <img src="img/item-lead.png" onclick="selectImg('leadimg');" id="leadimg" />
     <img src="img/item-scrap.png" onclick="selectImg('scrpimg');" id="scrpimg" />
@@ -39,7 +39,9 @@
       <li><a onclick="enableDiv('arbl', divsdr);colorA('arbl', divsdr);" class="arbl">Airblast Drill</a></li>
     </ul>
     <div id="mech">
-      <p>You have <span id="mechcount">0</span> Mechanical Drills</p>
+      <p>You have <span id="0count">0</span> Mechanical Drills producing <span id="0out">0</span> Copper per second.<br />
+        Buying 1 will cost <span id="0cost0">0</span> Copper and <span id="0cost16">0</span> Land.</p>
+      <button onclick="buy(drills.mech, 1);">Buy 1</button>
     </div>
     <div id="pneu">
       <p>Pneu Not ready yet</p>
@@ -51,13 +53,13 @@
       <p>Arbl Not ready yet</p>
     </div>
   </div>
-  <div id="crshop"><br />
+  <div id="crshop">
     <p>Crafting Shop not ready yet</p>
   </div>
-  <div id="upg"><br />
+  <div id="upg">
     <p>Upgrades not ready yet</p>
   </div>
-  <div id="land"><br />
+  <div id="land">
     <p>You have <span id="landcount">0</span> Land available</p>
   </div>
   <script type="text/javascript" src="main.js"></script>
