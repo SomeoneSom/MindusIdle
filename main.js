@@ -43,8 +43,8 @@ colorA("res", divsmain);
 selectImg("coppimg");
 //obj format: [count, cost, output]
 function wipeSave() {
-  window.localStorage['resources'] = JSON.stringify({"copper":12, "land":10});
-  window.localStorage['obj'] = JSON.stringify({"mech":[0, [12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]});
+  window.localStorage['resources'] = JSON.stringify({"copper":12, "lead":0, "scrap":0, "sand":0, "graphite":0, "metaglass":0, "spore_pod":0, "coal":0, "titanium":0, "thorium":0, "silicon":0, "plastanium":0, "phase_fabric":0, "surge_alloy":0, "blast_compound":0, "pyratite":0, "land":10});
+  window.localStorage['obj'] = JSON.stringify({"mech":[0, [12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]});
 }
 function loadSave() {
   resources = JSON.parse(window.localStorage['resources']);
@@ -52,6 +52,9 @@ function loadSave() {
 }
 if (typeof(window.localStorage['resources']) == undefined) {
   wipeSave();
+}
+function buy(obj, amount) {
+  //pass
 }
 loadSave();
 //nums go up here
