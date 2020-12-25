@@ -41,10 +41,10 @@ colorA("mech", divsdr);
 enableDiv("res", divsmain);
 colorA("res", divsmain);
 selectImg("coppimg");
-//obj format: [count, cost, output]
+//obj format: [count, costres, costdrills, output]
 function wipeSave() {
   window.localStorage['resources'] = JSON.stringify({"copper":12, "lead":0, "scrap":0, "sand":0, "graphite":0, "metaglass":0, "spore_pod":0, "coal":0, "titanium":0, "thorium":0, "silicon":0, "plastanium":0, "phase_fabric":0, "surge_alloy":0, "blast_compound":0, "pyratite":0, "land":10});
-  window.localStorage['obj'] = JSON.stringify({"mech":[0, [12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]});
+  window.localStorage['obj'] = JSON.stringify({"mech":[0, [12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]});
 }
 function loadSave() {
   resources = JSON.parse(window.localStorage['resources']);
@@ -63,9 +63,17 @@ window.setInterval(function(){
 }, 1000);
 //building and res counts change here
 window.setInterval(function(){
-  document.getElementById("copperres").innerHTML = resources.copper.toString(10);
+  for (var i = 0; i < 16; i++) {
+    document.getElementById(i.toString(10).concat("res")).innerHTML = resources[Object.keys(resources)[i]].toString(10);
+  }
   document.getElementById("landcount").innerHTML = resources.land.toString(10);
-  for (var i = 0; i < obj.length; i++) {
+  for (var i = 0; i < Object.keys(obj).length; i++) {
     document.getElementById(i.toString(10).concat("count")).innerHTML = obj[Object.keys(obj)[i]][0].toString(10);
+    for (var j = 0; j < 17; j++) {
+      cost = obj[Object.keys(obj)[i]][1][j].toString(10);
+      if (cost != "0") {
+        document.getElementById(i.toString(10).concat("cost", j.toString(10))).innerHTML = cost;
+      }
+    }
   }
 }, 100);
