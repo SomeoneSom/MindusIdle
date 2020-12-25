@@ -7,6 +7,9 @@
   color: white;
   background-color: #444;
 }
+a {
+  outline: 0;
+}
 ul.nav {
   list-style-type: none;
   margin: 0;
@@ -26,25 +29,5 @@ ul.nav>li a {
   text-decoration: none;
 }
 ul.nav>li a:hover {
-  background-color: #111;
-}
-ul.drnav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: sticky;
-  overflow: auto;
-}
-ul.drnav>li {
-  float: left;
-  border-bottom: 1px solid #444;
-}
-ul.drnav>li a {
-  display: block;
-  padding: 8px;
-  background-color: #555;
-  text-decoration: none;
-}
-ul.drnav> li a:hover {
   background-color: #111;
 }

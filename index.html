@@ -15,11 +15,11 @@
 </head>
 <body>
   <ul class="nav">
-    <li><a onclick="enableDiv('res', divsmain);colorA('res', divsmain);" class="res">Resources</a></li>
-    <li><a onclick="enableDiv('drshop', divsmain);colorA('drshop', divsmain);" class="drshop">Drill Shop</a></li>
-    <li><a onclick="enableDiv('crshop', divsmain);colorA('crshop', divsmain);" class="crshop">Crafting Shop</a></li>
-    <li><a onclick="enableDiv('upg', divsmain);colorA('upg', divsmain);" class="upg">Upgrades</a></li>
-    <li><a onclick="enableDiv('land', divsmain);colorA('land', divsmain);" class="land">Land</a></li>
+    <li><a href="javascript:enableDiv('res', divsmain);" class="res">Resources</a></li>
+    <li><a href="javascript:enableDiv('drshop', divsmain);" class="drshop">Drill Shop</a></li>
+    <li><a href="javascript:enableDiv('crshop', divsmain);" class="crshop">Crafting Shop</a></li>
+    <li><a href="javascript:enableDiv('upg', divsmain);" class="upg">Upgrades</a></li>
+    <li><a href="javascript:enableDiv('land', divsmain);" class="land">Land</a></li>
   </ul>
   <div id="res">
     <p>You have:<br />
@@ -41,8 +41,8 @@
       <span id="15res">0</span> Pyratite</p>
   </div>
   <div id="drshop">
-    <ul class="drnav">
-      <li><a onclick="enableDiv('mech', divsdr);colorA('mech', divsdr);" class="mech">Mechanical Drill</a></li>
+    <ul class="nav">
+      <li><a href="javascript:enableDiv('mech', divsdr);" class="mech">Mechanical Drill</a></li>
     </ul>
     <div id="mech">
       <p>You have <span id="0count">0</span> Mechanical Drills producing <span id="0out0">0</span> Copper and <span id="0out1">0</span> Lead per second.<br />
@@ -58,6 +58,9 @@
   </div>
   <div id="land">
     <p>You have <span id="landcount">0</span> Land available</p>
+    <ul class="nav">
+      <li><a href="javascript:enableDiv('duo', divslnd);" class="duo">Duo</a></li>
+    </ul>
   </div>
   <script type="text/javascript" src="main.js"></script>
 </body>
