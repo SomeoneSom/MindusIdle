@@ -3,7 +3,7 @@ var divsdr = ["mech"];
 var divslnd = ["duo"];
 var imgs = ["coppimg", "leadimg", "scrpimg", "sandimg", "coalimg", "titaimg", "thorimg"];
 var resources;
-var drills;
+var obj;
 function enableDiv(divname, divs) {
   for (var j = 0; j < divs.length; j++) {
     var divtag = divs[j];
@@ -80,7 +80,7 @@ window.setInterval(function(){
       }
       if (out != 0) {
         out *= obj[Object.keys(obj)[i]][0];
-        document.getElementById(i.toString(10).concat("out", j.toString(10))).innerHTML = out.toString(10); 
+        document.getElementById(i.toString(10).concat("out", j.toString(10))).innerHTML = out.toFixed(1); 
       }
     }
   }
