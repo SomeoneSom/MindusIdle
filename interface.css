@@ -39,7 +39,7 @@ div.options>button {
 }
 button.wsbutton {
   border: 1px solid red;
-  background-color: #111;
+  background-color: #222;
   color: red;
 }
 textarea {
