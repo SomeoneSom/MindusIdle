@@ -25,22 +25,10 @@ function colorA(divname, divs) {
     }
   }
 }
-function selectImg(imgName) {
-  for (var j = 0; j < imgs.length; j++) {
-    var imgtag = imgs[j];
-    var img = document.getElementById(imgtag);
-    if (imgName == imgtag) {
-      img.style.border = "1px solid white";
-    } else {
-      img.style.border = "none";
-    }
-  }
-}
 enableDiv("mech", divsdr);
 colorA("mech", divsdr);
 enableDiv("res", divsmain);
 colorA("res", divsmain);
-selectImg("coppimg");
 //obj format: [count, costres, costdrills, output]
 function wipeSave() {
   window.localStorage['resources'] = JSON.stringify({"copper":12, "lead":0, "scrap":0, "sand":0, "graphite":0, "metaglass":0, "spore_pod":0, "coal":0, "titanium":0, "thorium":0, "silicon":0, "plastanium":0, "phase_fabric":0, "surge_alloy":0, "blast_compound":0, "pyratite":0, "land":10});
