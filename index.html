@@ -20,6 +20,7 @@
     <li><a href="javascript:enableDiv('crshop', divsmain);" class="crshop">Crafting Shop</a></li>
     <li><a href="javascript:enableDiv('upg', divsmain);" class="upg">Upgrades</a></li>
     <li><a href="javascript:enableDiv('land', divsmain);" class="land">Land</a></li>
+    <li><a href="javascript:enableDiv('options', divsmain);" class="options">Options</a></li>
   </ul>
   <div id="res">
     <p>You have:<br />
@@ -66,6 +67,10 @@
       Buying 1 will cost <span id="1cost0">0</span> Copper.</p>
       <button onclick="buy(obj.duo, 1);">Buy 1</button>
     </div>
+  </div>
+  <div id="options">
+    <button onclick="wipeSave();loadSave();" class="wsbutton">Wipe Save (can't be undone)</button><br />
+    <button onclick="save()">Save</button><br />
   </div>
   <script type="text/javascript" src="main.js"></script>
 </body>

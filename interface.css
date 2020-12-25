@@ -6,6 +6,7 @@
   font-family: 'Mindusfont';
   color: white;
   background-color: #444;
+  font-size: medium;
 }
 a {
   outline: 0;
@@ -30,4 +31,17 @@ ul.nav>li a {
 }
 ul.nav>li a:hover {
   background-color: #111;
+}
+div.options>button {
+  padding: 8px;
+  background-color: #444;
+  border: 1px solid white;
+}
+button.wsbutton {
+  border: 1px solid red;
+  background-color: #111;
+  color: red;
+}
+textarea {
+  resize: none;
 }

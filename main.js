@@ -1,4 +1,4 @@
-var divsmain = ["res", "drshop", "crshop", "upg", "land"];
+var divsmain = ["res", "drshop", "crshop", "upg", "land", "options"];
 var divsdr = ["mech"];
 var divslnd = ["duo"];
 var imgs = ["coppimg", "leadimg", "scrpimg", "sandimg", "coalimg", "titaimg", "thorimg"];
