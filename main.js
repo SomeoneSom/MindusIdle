@@ -53,8 +53,20 @@ function loadSave() {
 if (typeof(window.localStorage['resources']) == undefined) {
   wipeSave();
 }
-function buy(obj, amount) {
-  //pass
+function save() {
+  window.localStorage['resources'] = JSON.stringify(resources);
+  window.localStorage['obj'] = JSON.stringify(obj);
+}
+function buy(objc, amount) {
+  for (var i = 0; i < 17; i++) {
+    if (resources[Object.keys(resources)[i]] < objc[1][i]) {
+      return;
+    }
+  }
+  for (var i = 0; i < 17; i++) {
+    resources[Object.keys(resources)[i]] -= objc[1][i];
+  }
+  objc[0] += 1;
 }
 loadSave();
 //nums go up here
@@ -77,3 +89,5 @@ window.setInterval(function(){
     }
   }
 }, 100);
+window.setInterval(save(), 600)
+window.onbeforeunload = save();
