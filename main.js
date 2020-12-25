@@ -1,5 +1,5 @@
 var divsmain = ["res", "drshop", "crshop", "upg", "land"];
-var divsdr = ["mech", "pneu", "lasr", "arbl"]
+var divsdr = ["mech"]
 var imgs = ["coppimg", "leadimg", "scrpimg", "sandimg", "coalimg", "titaimg", "thorimg"];
 var resources;
 var drills;
@@ -31,8 +31,8 @@ enableDiv("res", divsmain);
 colorA("res", divsmain);
 //obj format: [count, costres, costdrills, output]
 function wipeSave() {
-  window.localStorage['resources'] = JSON.stringify({"copper":12, "lead":0, "scrap":0, "sand":0, "graphite":0, "metaglass":0, "spore_pod":0, "coal":0, "titanium":0, "thorium":0, "silicon":0, "plastanium":0, "phase_fabric":0, "surge_alloy":0, "blast_compound":0, "pyratite":0, "land":10});
-  window.localStorage['obj'] = JSON.stringify({"mech":[0, [12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]});
+  window.localStorage['resources'] = JSON.stringify({"copper":30, "lead":0, "scrap":0, "sand":0, "graphite":0, "metaglass":0, "spore_pod":0, "coal":0, "titanium":0, "thorium":0, "silicon":0, "plastanium":0, "phase_fabric":0, "surge_alloy":0, "blast_compound":0, "pyratite":0, "land":10});
+  window.localStorage['obj'] = JSON.stringify({"mech":[0, [30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]});
 }
 function loadSave() {
   resources = JSON.parse(window.localStorage['resources']);
@@ -53,13 +53,22 @@ function buy(objc, amount) {
   }
   for (var i = 0; i < 17; i++) {
     resources[Object.keys(resources)[i]] -= objc[1][i];
+    if (i != 16) {
+      objc[1][i] = Math.round(objc[1][i] * 1.15);
+    }
   }
   objc[0] += 1;
 }
 loadSave();
 //nums go up here
 window.setInterval(function(){
-  //pass
+  for (var i = 0; i < Object.keys(obj).length; i++) {
+    object = obj[Object.keys(obj)[i]]
+    amount = object[0];
+    for (var j = 0; j < 17; j++) {
+      resources[Object.keys(resources)[j]] += object[2][j] * amount;
+    }
+  }
 }, 1000);
 //building and res counts change here
 window.setInterval(function(){
@@ -77,5 +86,6 @@ window.setInterval(function(){
     }
   }
 }, 100);
-window.setInterval(save(), 600)
+//autosave every 30 seconds
+window.setInterval(save(), 30000)
 window.onbeforeunload = save();
