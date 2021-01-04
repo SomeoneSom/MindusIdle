@@ -37,6 +37,9 @@ button {
   background-color: #444;
   border: 1px solid white;
 }
+button:hover {
+  background-color: #111;
+}
 button.wsbutton {
   border: 1px solid red;
   background-color: #222;

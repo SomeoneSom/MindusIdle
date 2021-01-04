@@ -28,7 +28,7 @@ function wipeSave() {
     "mech":[0, [25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
     "duo":[0, [35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1]]});
   window.localStorage['upgrades'] = JSON.stringify(
-    [['Oiled Cogs', 'Speed up Mechanical Drills by 2x.\nCosts 100 Copper.', 'function(){}', 0, 'function(){return resources.copper >= 50}', 'function(){return resources.copper >= 100}', 0]
+    [['Oiled Cogs', 'Speed up Mechanical Drills by 2x.\nCosts 100 Copper.', 0, 'function(){return resources.copper >= 50}', 'function(){var ret = resources.copper >= 100;obj.mech[2] = (ret) ? obj.mech[2].map(x => x * 2) : obj.mech[2];resources.copper -= (ret) ? 100 : 0;return ret;}', 0]
   ]);
 }
 function loadSave() {
@@ -93,9 +93,9 @@ window.setInterval(function(){
 window.setInterval(save(), 30000)
 window.setInterval(function(){
   for (var i = 0; i < upgrades.length; i++) {
-    if ((eval('('+upgrades[i][4]+'());') == true) && (upgrades[i][6] == 0)) {
-      document.getElementById('upg').innerHTML += `<button title="${upgrades[i][1]}" onclick="eval(upgrades[${i}][2]())">${upgrades[i][0]}</button>`;
-      upgrades[i][6] = 1;    
+    if ((eval('('+upgrades[i][3]+'());') == true) && (upgrades[i][5] == 0)) {
+      document.getElementById('upg').innerHTML += `<button title="${upgrades[i][1]}" onclick="${upgrades[i][4]}()">${upgrades[i][0]}</button>`;
+      upgrades[i][5] = 1;    
     }
   }
 }, 1000);
