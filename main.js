@@ -27,10 +27,12 @@ function wipeSave() {
   window.localStorage['obj'] = JSON.stringify({
     "mech":[0, [25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
     "duo":[0, [35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1]]});
+  window.localStorage['upgrades'] = [["Oiled Cogs", "Speed up Mechanical Drills by 2x.\nCosts 100 Copper.", function(){}, 0, function(){return resources.copper >= 50}, function(){return resources.copper >= 100}]];
 }
 function loadSave() {
   resources = JSON.parse(window.localStorage['resources']);
   obj = JSON.parse(window.localStorage['obj']);
+  upgrades = window.localStorage['upgrades'];
 }
 if (typeof(window.localStorage['resources']) == undefined) {
   wipeSave();
@@ -87,4 +89,8 @@ window.setInterval(function(){
 }, 100);
 //autosave every 30 seconds
 window.setInterval(save(), 30000)
-window.onbeforeunload = save();
+window.setInterbal(function(){
+  for (var i = 0; i < upgrades.length(); i++) {
+    //pass
+  }
+}, 1000)
