@@ -27,12 +27,14 @@ function wipeSave() {
   window.localStorage['obj'] = JSON.stringify({
     "mech":[0, [25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
     "duo":[0, [35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1]]});
-  window.localStorage['upgrades'] = [["Oiled Cogs", "Speed up Mechanical Drills by 2x.\nCosts 100 Copper.", function(){}, 0, function(){return resources.copper >= 50}, function(){return resources.copper >= 100}]];
+  window.localStorage['upgrades'] = JSON.stringify(
+    [['Oiled Cogs', 'Speed up Mechanical Drills by 2x.\nCosts 100 Copper.', 'function(){}', 0, 'function(){return resources.copper >= 50}', 'function(){return resources.copper >= 100}', 0]
+  ]);
 }
 function loadSave() {
   resources = JSON.parse(window.localStorage['resources']);
   obj = JSON.parse(window.localStorage['obj']);
-  upgrades = window.localStorage['upgrades'];
+  upgrades = JSON.parse(window.localStorage['upgrades']);
 }
 if (typeof(window.localStorage['resources']) == undefined) {
   wipeSave();
@@ -89,8 +91,15 @@ window.setInterval(function(){
 }, 100);
 //autosave every 30 seconds
 window.setInterval(save(), 30000)
-window.setInterbal(function(){
-  for (var i = 0; i < upgrades.length(); i++) {
-    //pass
+window.setInterval(function(){
+  for (var i = 0; i < upgrades.length; i++) {
+    if ((eval('('+upgrades[i][4]+'());') == true) && (upgrades[i][6] == 0)) {
+      document.getElementById('upg').innerHTML += `<button title="${upgrades[i][1]}" onclick="eval(upgrades[${i}][2]())">${upgrades[i][0]}</button>`;
+      upgrades[i][6] = 1;    
+    }
   }
-}, 1000)
+}, 1000);
+window.addEventListener('beforeunload', function(){
+  save();
+  return null;
+});

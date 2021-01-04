@@ -32,7 +32,7 @@ ul.nav>li a {
 ul.nav>li a:hover {
   background-color: #111;
 }
-div.options>button {
+button {
   padding: 8px;
   background-color: #444;
   border: 1px solid white;
