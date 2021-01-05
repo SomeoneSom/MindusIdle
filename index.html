@@ -44,10 +44,16 @@
   <div id="drshop">
     <ul class="nav">
       <li><a href="javascript:enableDiv('mech', divsdr);" class="mech">Mechanical Drill</a></li>
+      <li><a href="javascript:enableDiv('leadr', divsdr);" class="leadr">Lead Drill</a></li>
     </ul>
     <div id="mech">
       <p>You have <span id="0count">0</span> Mechanical Drills producing <span id="0out0">0</span> Copper and <span id="0out1">0</span> Lead per second.<br />
         Buying 1 will cost <span id="0cost0">0</span> Copper and <span id="0cost16">0</span> Land.</p>
+      <button onclick="buy(obj.mech, 1);">Buy 1</button>
+    </div>
+    <div id="leadr">
+      <p>You have <span id="2count">0</span> Lead Drills producing <span id="2out1">0</span> Lead per second.<br />
+        Buying 1 will cost <span id="2cost0">0</span> Copper, <span id="2cost1">0</span> Lead, and <span id="2cost16">0</span> Land.</p>
       <button onclick="buy(obj.mech, 1);">Buy 1</button>
     </div>
   </div>
