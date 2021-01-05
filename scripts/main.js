@@ -1,7 +1,4 @@
 var divsmain = ["res", "drshop", "crshop", "upg", "land", "options"];
-var divsdr = ["mech"];
-var divslnd = ["duo"];
-var imgs = ["coppimg", "leadimg", "scrpimg", "sandimg", "coalimg", "titaimg", "thorimg"];
 var resources;
 var obj;
 function enableDiv(divname, divs) {
@@ -98,10 +95,6 @@ window.setInterval(function(){
       upgrades[i][5] = 1;    
     }
   }
-}, 1000);
-//unlock management
-window.setInterval(function(){
-  //pass
 }, 1000);
 //save on window close
 window.addEventListener('beforeunload', function(){

@@ -1,3 +1,5 @@
+var divsdr = ["mech"];
+var divslnd = ["duo"];
 resourcesj = JSON.stringify({
     "copper":25,
     "lead":0,
@@ -34,7 +36,9 @@ upgradesj = JSON.stringify([
         "Oiled Cogs",
         "Speed up Mechanical Drills by 2x.\nCosts 100 Copper.",
         0,
-        "function(){return resources.copper >= 50}",
+        `function(){
+            return resources.copper >= 50
+        }`,
         `function(){
             var ret = resources.copper >= 100;
             obj.mech[2] = (ret) ? obj.mech[2].map(x => x * 2) : obj.mech[2];
