@@ -21,15 +21,10 @@ function enableDiv(divname, divs) {
 enableDiv("mech", divsdr);
 enableDiv("res", divsmain);
 enableDiv("duo", divslnd);
-//obj format: [count, costres, costdrills, output]
 function wipeSave() {
-  window.localStorage['resources'] = JSON.stringify({"copper":25, "lead":0, "scrap":0, "sand":0, "graphite":0, "metaglass":0, "spore_pod":0, "coal":0, "titanium":0, "thorium":0, "silicon":0, "plastanium":0, "phase_fabric":0, "surge_alloy":0, "blast_compound":0, "pyratite":0, "land":10});
-  window.localStorage['obj'] = JSON.stringify({
-    "mech":[0, [25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1], [1, 0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]],
-    "duo":[0, [35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1]]});
-  window.localStorage['upgrades'] = JSON.stringify(
-    [['Oiled Cogs', 'Speed up Mechanical Drills by 2x.\nCosts 100 Copper.', 0, 'function(){return resources.copper >= 50}', 'function(){var ret = resources.copper >= 100;obj.mech[2] = (ret) ? obj.mech[2].map(x => x * 2) : obj.mech[2];resources.copper -= (ret) ? 100 : 0;return ret;}', 0]
-  ]);
+  window.localStorage['resources'] = resourcesj;
+  window.localStorage['obj'] = objj;
+  window.localStorage['upgrades'] = upgradesj;
 }
 function loadSave() {
   resources = JSON.parse(window.localStorage['resources']);
@@ -89,11 +84,13 @@ window.setInterval(function(){
     }
   }
 }, 100);
+//needed for upgrades
 function do_func(func) {
   func();
 }
 //autosave every 30 seconds
 window.setInterval(save(), 30000)
+//upgrade management
 window.setInterval(function(){
   for (var i = 0; i < upgrades.length; i++) {
     if ((eval('('+upgrades[i][3]+'());') == true) && (upgrades[i][5] == 0)) {
@@ -102,6 +99,11 @@ window.setInterval(function(){
     }
   }
 }, 1000);
+//unlock management
+window.setInterval(function(){
+  //pass
+}, 1000);
+//save on window close
 window.addEventListener('beforeunload', function(){
   save();
   return null;
