@@ -49,3 +49,22 @@ button.wsbutton {
 textarea {
   resize: none;
 }
+div.autosavebar {
+  z-index: 100;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  text-align: center;
+  visibility: hidden;
+  width: 100%;
+  opacity: 0;
+  border: 2px solid #3c763d;
+  background-color: #5cb85c;
+  transition: visibility 1s, opacity 1s;
+}
+div.autosavebar>p {
+  color: #3c763d;
+  background-color: #5cb85c;
+}

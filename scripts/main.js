@@ -36,6 +36,11 @@ if (typeof(window.localStorage['resources']) == undefined) {
 function save() {
   window.localStorage['resources'] = JSON.stringify(resources);
   window.localStorage['obj'] = JSON.stringify(obj);
+  //this code shows the 'Saved!' bar
+  var bar = document.getElementsByClassName("autosavebar")[0];
+  bar.style.visibility = "visible";
+  bar.style.opacity = 1;
+  window.setTimeout(function(){bar.style.visibility = "hidden";bar.style.opacity = 0;}, 1000);
 }
 function buy(objc, amount) {
   for (var i = 0; i < 17; i++) {
@@ -64,10 +69,9 @@ window.setInterval(function(){
 }, 1000);
 //building and res counts change here
 window.setInterval(function(){
-  for (var i = 0; i < 16; i++) {
+  for (var i = 0; i < 17; i++) {
     document.getElementById(i.toString(10).concat("res")).innerHTML = resources[Object.keys(resources)[i]].toString(10);
   }
-  document.getElementById("landcount").innerHTML = resources.land.toString(10);
   for (var i = 0; i < Object.keys(obj).length; i++) {
     document.getElementById(i.toString(10).concat("count")).innerHTML = obj[Object.keys(obj)[i]][0].toString(10);
     for (var j = 0; j < 17; j++) {
