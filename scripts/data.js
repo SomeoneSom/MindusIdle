@@ -1,6 +1,4 @@
-var divsdr = ["mech", "leadr"];
-var divslnd = ["duo"];
-resourcesj = JSON.stringify({
+var resourcesj = JSON.stringify({
     "copper":25,
     "lead":0,
     "scrap":0,
@@ -19,7 +17,7 @@ resourcesj = JSON.stringify({
     "pyratite":0,
     "land":10
 });
-objj = JSON.stringify({
+var objj = JSON.stringify({
     "mech": [
         0,
         [25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
@@ -31,12 +29,12 @@ objj = JSON.stringify({
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1]
     ],
     "leadr": [
-        0.
+        0,
         [2, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     ]
 });
-upgradesj = JSON.stringify([
+var upgradesj = JSON.stringify([
     [
         "Extra-Powerful Grease",
         "Speed up Mechanical Drills by 2x.\nCosts 100 Copper.",

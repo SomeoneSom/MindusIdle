@@ -1,4 +1,6 @@
 var divsmain = ["res", "drshop", "crshop", "upg", "land", "options"];
+var divsdr = ["mech", "leadr"];
+var divslnd = ["duo"];
 var resources;
 var obj;
 function enableDiv(divname, divs) {
