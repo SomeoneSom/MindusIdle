@@ -32,17 +32,17 @@ objj = JSON.stringify({
     ],
     "leadr": [
         0.
-        [2, 5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+        [2, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
     ]
 });
 upgradesj = JSON.stringify([
     [
-        "Extra-powerful Grease",
+        "Extra-Powerful Grease",
         "Speed up Mechanical Drills by 2x.\nCosts 100 Copper.",
         0,
         `function(){
-            return resources.copper >= 50
+            return resources.copper >= 50;
         }`,
         `function(){
             var ret = resources.copper >= 100;
