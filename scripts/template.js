@@ -1,6 +1,8 @@
+//capitalize function for obj names
 String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
+//make all necessary anchors and divs in the correct locations for all the objs
 var i = 0;
 for (var objct of Object.keys(JSON.parse(objj))) {
     var flag = JSON.parse(objj)[objct][3];
