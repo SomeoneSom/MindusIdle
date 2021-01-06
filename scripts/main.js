@@ -1,5 +1,6 @@
 var divsmain = ["res", "drshop", "crshop", "upg", "land", "options"];
 var divsdr = ["mech", "leadr"];
+var divscr = [];
 var divslnd = ["duo"];
 var resources;
 var obj;
@@ -24,6 +25,7 @@ function wipeSave() {
   window.localStorage['resources'] = resourcesj;
   window.localStorage['obj'] = objj;
   window.localStorage['upgrades'] = upgradesj;
+  document.getElementById('upg').innerHTML = "";
 }
 function loadSave() {
   resources = JSON.parse(window.localStorage['resources']);
@@ -70,7 +72,7 @@ window.setInterval(function(){
 //building and res counts change here
 window.setInterval(function(){
   for (var i = 0; i < 17; i++) {
-    document.getElementById(i.toString(10).concat("res")).innerHTML = resources[Object.keys(resources)[i]].toString(10);
+    document.getElementById(i.toString(10).concat("res")).innerHTML = parseFloat(resources[Object.keys(resources)[i]].toFixed(2)).toString(10);
   }
   for (var i = 0; i < Object.keys(obj).length; i++) {
     document.getElementById(i.toString(10).concat("count")).innerHTML = obj[Object.keys(obj)[i]][0].toString(10);
@@ -96,12 +98,16 @@ window.setInterval(save(), 30000)
 //upgrade management
 window.setInterval(function(){
   for (var i = 0; i < upgrades.length; i++) {
-    if ((eval('('+upgrades[i][3]+'());') == true) && (upgrades[i][5] == 0)) {
-      document.getElementById('upg').innerHTML += `<button title="${upgrades[i][1]}" onclick="do_func(${upgrades[i][4]})">${upgrades[i][0]}</button>`;
+    if ((eval('('+upgrades[i][3]+'());') == true) && (document.getElementById(upgrades[i][0]) == null) && (upgrades)) {
+      document.getElementById('upg').innerHTML += `<button id="${upgrades[i][0]}" title="${upgrades[i][1]}" onclick="do_func(${upgrades[i][4]});upgrades[${i}][2]=1;">${upgrades[i][0]}</button>`;
       upgrades[i][5] = 1;    
     }
+    if (upgrades[i][2] == 1 && document.getElementById(upgrades[i][0]) != null) {
+      element = document.getElementById(upgrades[i][0]);
+      element.parentNode.removeChild(element);
+    }
   }
-}, 1000);
+}, 100);
 //save on window close
 window.addEventListener('beforeunload', function(){
   save();
