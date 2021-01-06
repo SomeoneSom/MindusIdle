@@ -20,14 +20,14 @@ for (var objct of Object.keys(JSON.parse(objj))) {
         document.getElementById('land').innerHTML += `<div id="${objct}"></div>`;
     }
     document.getElementById(id).innerHTML += `<li><a href="javascript:enableDiv('${objct}', ${divlst})" class="${objct}">${JSON.parse(objj)[objct][4]}</a></li>`;
-    document.getElementById(objct).innerHTML += `<p>You have <span id="${i}count">0</span> ${JSON.parse(objj)[objct][4]}s producing`;
+    document.getElementById(objct).innerHTML += `<p>You have <span id="${i}count">0</span> ${JSON.parse(objj)[objct][4]}s producing:`;
     for (var j = 0; j < 17; j++) {
         if (JSON.parse(objj)[objct][2][j] != 0) {
             document.getElementById(objct).innerHTML += `<span id="${i}out${j}">and 0</span> ${Object.keys(JSON.parse(resourcesj))[j].capitalize()} `;
         }
     }
-    document.getElementById(objct).innerHTML += `per second<br /><br />
-    Buying 1 will cost<br /><br />`;
+    document.getElementById(objct).innerHTML += `per second.<br /><br />
+    Buying 1 will cost:<br /><br />`;
     for (var j = 0; j < 17; j++) {
         if (JSON.parse(objj)[objct][1][j] != 0) {
             document.getElementById(objct).innerHTML += `<span id="${i}cost${j}">, 0</span> ${Object.keys(JSON.parse(resourcesj))[j].capitalize()} `;
