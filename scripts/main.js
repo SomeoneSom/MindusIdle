@@ -37,7 +37,7 @@ function getNewFeatures() {
     if (typeof(obj[objct]) == "undefined") {
       obj[objct] = JSON.parse(objj)[objct];
     }
-    for (var i = 0; i < 5; i++) {
+    for (var i = 1; i < 5; i++) {
       obj[objct][i] = JSON.parse(objj)[objct][i];
     }
   }
