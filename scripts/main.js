@@ -18,6 +18,9 @@ function enableDiv(divname, divs) {
     }
   }
 }
+enableDiv("mech", divsdr);
+enableDiv("res", divsmain);
+enableDiv("duo", divslnd);
 function wipeSave() {
   window.localStorage['resources'] = resourcesj;
   window.localStorage['obj'] = objj;

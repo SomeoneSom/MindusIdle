@@ -1,3 +1,6 @@
+v0.2.1 - 1/7/21
+    Fixed major bug where crafting shop text persisted on save wipe
+
 v0.2.0 - 1/7/21
     Added Coal Drill
     Added Graphite Press
