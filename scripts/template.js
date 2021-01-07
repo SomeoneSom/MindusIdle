@@ -30,7 +30,7 @@ for (var objct of Object.keys(JSON.parse(objj))) {
     Buying 1 will cost:<br /><br />`;
     for (var j = 0; j < 17; j++) {
         if (JSON.parse(objj)[objct][1][j] != 0) {
-            document.getElementById(objct).innerHTML += `<span id="${i}cost${j}">, 0</span> ${Object.keys(JSON.parse(resourcesj))[j].capitalize()} `;
+            document.getElementById(objct).innerHTML += `<span id="${i}cost${j}">and 0</span> ${Object.keys(JSON.parse(resourcesj))[j].capitalize()} `;
         }
     }
     document.getElementById(objct).innerHTML += `</p>

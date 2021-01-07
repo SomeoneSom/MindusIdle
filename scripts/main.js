@@ -32,7 +32,17 @@ function loadSave() {
   obj = JSON.parse(window.localStorage['obj']);
   upgrades = JSON.parse(window.localStorage['upgrades']);
 }
-if (typeof(window.localStorage['resources']) == undefined) {
+function getNewFeatures() {
+  for (var objct of Object.keys(JSON.parse(objj))) {
+    if (typeof(obj[objct]) == "undefined") {
+      obj[objct] = JSON.parse(objj)[objct];
+    }
+    for (var i = 0; i < 5; i++) {
+      obj[objct][i] = JSON.parse(objj)[objct][i];
+    }
+  }
+}
+if (typeof(window.localStorage['resources']) == "undefined") {
   wipeSave();
 }
 function save() {
@@ -59,6 +69,7 @@ function buy(objc, amount) {
   objc[0] += 1;
 }
 loadSave();
+getNewFeatures();
 //nums go up here
 window.setInterval(function(){
   for (var i = 0; i < Object.keys(obj).length; i++) {

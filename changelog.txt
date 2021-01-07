@@ -1,0 +1,5 @@
+v0.1.0 - 1/6/21
+    Made changelog.txt
+    Fixed making new save data if there was none
+    Now gets new features automatically instead of having to wipe save
+    Version, source code link, and changelog link now in bottom left
