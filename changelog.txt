@@ -1,3 +1,8 @@
+v0.2.0 - 1/7/21
+    Added Coal Drill
+    Added Graphite Press
+    Changed styling of buttons slightly
+
 v0.1.2 - 1/7/21
     Version text is now in bottom right as not not be covered by hovering over anchors
     Drills now unlock when you meet the requirements to buy them

@@ -1,6 +1,6 @@
 var divsmain = ["res", "drshop", "crshop", "upg", "land", "options"];
-var divsdr = ["mech", "leadr"];
-var divscr = [];
+var divsdr = ["mech", "leadr", "coaldr"];
+var divscr = ["graphpress"];
 var divslnd = ["duo"];
 var resources;
 var obj;
@@ -18,9 +18,6 @@ function enableDiv(divname, divs) {
     }
   }
 }
-enableDiv("mech", divsdr);
-enableDiv("res", divsmain);
-enableDiv("duo", divslnd);
 function wipeSave() {
   window.localStorage['resources'] = resourcesj;
   window.localStorage['obj'] = objj;
