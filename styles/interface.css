@@ -7,6 +7,7 @@
   color: white;
   background-color: #444;
   font-size: medium;
+  outline: none;
 }
 a {
   outline: 0;
