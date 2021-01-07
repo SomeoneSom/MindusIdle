@@ -37,3 +37,18 @@ for (var objct of Object.keys(JSON.parse(objj))) {
     <button onclick="buy(obj.${objct}, 1);">Buy 1</button>`;
     i++;
 }
+//manage unlocking of all objects (not upgrades)
+window.setInterval(function(){
+    for (var objct of Object.keys(JSON.parse(objj))) {
+        if (obj[objct][0] > 0) {
+            continue;
+        }
+        var entry = document.getElementsByClassName(objct)[0];
+        var canBuy = JSON.parse(objj)[objct][1].map(function(x, i){return x <= Object.values(resources)[i]}).every(Boolean);
+        if (canBuy == true) {
+            entry.style.display = "";
+        } else {
+            entry.style.display = "none";
+        }
+    }
+}, 100);
