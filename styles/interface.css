@@ -35,16 +35,19 @@ ul.nav>li a:hover {
 }
 button {
   padding: 8px;
-  background-color: #444;
+  background-color: #555;
   border: 1px solid white;
 }
 button:hover {
-  background-color: #111;
+  color: orange;
 }
 button.wsbutton {
   border: 1px solid red;
   background-color: #222;
   color: red;
+}
+button.wsbutton:hover {
+  color: darkred;
 }
 textarea {
   resize: none;
