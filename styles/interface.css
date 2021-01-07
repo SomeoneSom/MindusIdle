@@ -68,12 +68,31 @@ div.autosavebar>p {
   color: #3c763d;
   background-color: #5cb85c;
 }
-div.version {
+.version1 {
   color: #555;
-  z-index: 100;
+  z-index: 99;
+  bottom: 22;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  font-size: small;
+}
+.version2 {
+  z-index: 98;
+  color: #555;
+  bottom: 12;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  font-size: small;
+}
+.version3 {
+  z-index: 97;
+  color: #555;
   bottom: 0;
   left: 0;
-  text-align: center;
   margin: 0;
   padding: 0;
   position: fixed;
