@@ -68,7 +68,7 @@ div.autosavebar>p {
 .version1 {
   color: #555;
   z-index: 99;
-  bottom: 24;
+  bottom: 30;
   right: 0;
   margin: 0;
   padding: 0;
@@ -77,7 +77,7 @@ div.autosavebar>p {
 .version2 {
   z-index: 98;
   color: #555;
-  bottom: 12;
+  bottom: 15;
   right: 0;
   margin: 0;
   padding: 0;
