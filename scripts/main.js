@@ -77,7 +77,7 @@ window.setInterval(function(){
     object = obj[Object.keys(obj)[i]]
     amount = object[0];
     for (var j = 0; j < 17; j++) {
-      if (object[5]*amount >= resources["power"]) {
+      if (object[5]*amount <= resources["power"]) {
         resources[Object.keys(resources)[j]] += object[2][j] * amount;
         resources["power"] -= object[5]*amount;
       }
