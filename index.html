@@ -14,14 +14,21 @@
     gtag('config', 'G-ECR7K8ZWW5');
   </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="styles/interface.css" />
+  <script type="text/javascript" src="modules/jQuery.style.switcher.js"></script>
+  <link rel="stylesheet" href="styles/interface.css">
+  <link rel="stylesheet" id="jssDefault" href="styles/dark.css">
   <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
   <link rel="icon" type="image/png" sizes="512x512" href="icons/favicon-512x512.png">
 </head>
 <body>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('#styleOptions').styleSwitcher();
+  });
+  </script>
   <div class="version">
-    <p class="version1">v0.2.1</p>
+    <p class="version1">v0.3.0</p>
     <a class="version2" href="https://github.com/SomeoneSom/MindusIdle">source code</a>
     <a class="version3" href="https://someonesom.github.io/MindusIdle/changelog.txt">changelog</a>
   </div>
@@ -67,6 +74,10 @@
   <div id="options">
     <button onclick="wipeSave();loadSave();" class="wsbutton">Wipe Save (can't be undone)</button><br />
     <button onclick="save()">Save</button><br />
+    <ul class="nav" id="styleOptions">
+      <li><a href="javascript: void(0)" data-theme="dark">Dark Mode</a></li><br /><br />
+      <li><a href="javascript: void(0)" data-theme="light">Light Mode</a></li>
+    </ul>
   </div>
   <div class="autosavebar">
     <p>Saved!</p>

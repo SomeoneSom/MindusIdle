@@ -1,0 +1,22 @@
+* {
+    color: black;
+    background-color: #fff;
+}
+ul.nav>li {
+    border-right: 1px solid #fff;
+}
+ul.nav>li a {
+    color: white;
+    background-color: #aaa;
+}
+ul.nav>li a:hover {
+    background-color: #555;
+}
+button {
+    background-color: #aaa;
+    color: white;
+    border: 1px solid white;
+}
+button.wsbutton {
+    background-color: #555;
+}

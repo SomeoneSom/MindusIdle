@@ -1,3 +1,7 @@
+v0.3.0 - 1/8/21
+    Added jQuery Style Switcher
+    Added (ugly) light theme
+
 v0.2.1 - 1/7/21
     Fixed major bug where crafting shop text persisted on save wipe
 
