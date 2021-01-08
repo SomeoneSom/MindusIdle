@@ -1,7 +1,8 @@
-var divsmain = ["res", "drshop", "crshop", "upg", "land", "options"];
+var divsmain = ["res", "drshop", "crshop", "upg", "power", "land", "options"];
 var divsdr = ["mech", "leadr", "coaldr"];
 var divscr = ["graphpress"];
 var divslnd = ["duo"];
+var divspower = [];
 var resources;
 var obj;
 function enableDiv(divname, divs) {
@@ -37,7 +38,7 @@ function getNewFeatures() {
     if (typeof(obj[objct]) == "undefined") {
       obj[objct] = JSON.parse(objj)[objct];
     }
-    for (var i = 1; i < 5; i++) {
+    for (var i = 1; i < 6; i++) {
       obj[objct][i] = JSON.parse(objj)[objct][i];
     }
   }
@@ -76,7 +77,10 @@ window.setInterval(function(){
     object = obj[Object.keys(obj)[i]]
     amount = object[0];
     for (var j = 0; j < 17; j++) {
-      resources[Object.keys(resources)[j]] += object[2][j] * amount;
+      if (object[5]*amount >= resources["power"]) {
+        resources[Object.keys(resources)[j]] += object[2][j] * amount;
+        resources["power"] -= object[5]*amount;
+      }
     }
   }
 }, 1000);
@@ -87,7 +91,7 @@ window.setInterval(function(){
   }
   for (var i = 0; i < Object.keys(obj).length; i++) {
     document.getElementById(i.toString(10).concat("count")).innerHTML = obj[Object.keys(obj)[i]][0].toString(10);
-    for (var j = 0; j < 17; j++) {
+    for (var j = 0; j < 18; j++) {
       out = obj[Object.keys(obj)[i]][2][j];
       cost = obj[Object.keys(obj)[i]][1][j].toString(10);
       if (cost != "0") {

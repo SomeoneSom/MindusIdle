@@ -1,3 +1,7 @@
+v0.4.0 - 1/8/21
+    Added power (WARNING: NOT TESTED)
+    Removed the word "shop" from navbar
+
 v0.3.0 - 1/8/21
     Added jQuery Style Switcher
     Added (ugly) light theme

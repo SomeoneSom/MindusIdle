@@ -14,10 +14,14 @@ for (var objct of Object.keys(JSON.parse(objj))) {
         var divlst = "divscr";
         var id = "crnav";
         document.getElementById('crshop').innerHTML += `<div id="${objct}"></div>`;
-    } else {
+    } else if (flag == 2) {
         var divlst = "divslnd";
         var id = "lndnav"
         document.getElementById('land').innerHTML += `<div id="${objct}"></div>`;
+    } else {
+        var divlst = "divspower";
+        var id = "powernav";
+        document.getElementById('power').innerHTML += `<div id="${objct}"></div>`;
     }
     document.getElementById(id).innerHTML += `<li><a href="javascript:enableDiv('${objct}', ${divlst})" class="${objct}">${JSON.parse(objj)[objct][4]}</a></li>`;
     document.getElementById(objct).innerHTML += `<p>You have <span id="${i}count">0</span> ${pluralize(JSON.parse(objj)[objct][4])} producing:`;
@@ -33,7 +37,8 @@ for (var objct of Object.keys(JSON.parse(objj))) {
             document.getElementById(objct).innerHTML += `<span id="${i}cost${j}"> 0</span> ${Object.keys(JSON.parse(resourcesj))[j].capitalize()} `;
         }
     }
-    document.getElementById(objct).innerHTML += `</p>
+    document.getElementById(objct).innerHTML += `<br /><br />
+    Additionally, each ${JSON.parse(objj)[objct][4]} ${(JSON.parse(objj)[objct][5] < 0) ? 'produces' : 'consumes'} ${Math.abs(JSON.parse(objj)[objct][5])} power per second, totaling <span id="${i}out{j}">0</span> power per second.</p>
     <button onclick="buy(obj.${objct}, 1);">Buy 1</button>`;
     i++;
 }

@@ -15,7 +15,8 @@ var resourcesj = JSON.stringify({
     "surge_alloy":0,
     "blast_compound":0,
     "pyratite":0,
-    "land":10
+    "land":10,
+    "power":0
 });
 var objj = JSON.stringify({
     "mech": [
@@ -23,35 +24,40 @@ var objj = JSON.stringify({
         [25, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [1, 0.1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         0,
-        "Mechanical Drill"
+        "Mechanical Drill",
+        0
     ],
     "duo": [
         0,
         [35, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.1],
         2,
-        "Duo"
+        "Duo",
+        0
     ],
     "leadr": [
         0,
         [2, 30, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
         [0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         0,
-        "Lead Drill"
+        "Lead Drill",
+        0
     ],
     "coaldr": [
         0,
         [100, 100, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 0, 0, 0, 1.5, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         0,
-        "Coal Drill"
+        "Coal Drill",
+        0
     ],
     "graphpress": [
         0,
         [150, 150, 0, 0, 0, 0, 0, 150, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         [0, 0, 0, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,],
         1,
-        "Graphite Press"
+        "Graphite Press",
+        0
     ]
 });
 var upgradesj = JSON.stringify([
