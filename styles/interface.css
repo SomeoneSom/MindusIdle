@@ -83,7 +83,6 @@ div.autosavebar>p {
   margin: 0;
   padding: 0;
   position: fixed;
-  font-size: small;
 }
 .version2 {
   z-index: 98;
@@ -93,7 +92,6 @@ div.autosavebar>p {
   margin: 0;
   padding: 0;
   position: fixed;
-  font-size: small;
 }
 .version3 {
   z-index: 97;
@@ -103,5 +101,4 @@ div.autosavebar>p {
   margin: 0;
   padding: 0;
   position: fixed;
-  font-size: small;
 }
