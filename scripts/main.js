@@ -109,7 +109,7 @@ function do_func(func) {
   func();
 }
 //autosave every 30 seconds
-window.setInterval(save(), 30000)
+window.setInterval(save(), 30000);
 //upgrade management
 window.setInterval(function(){
   for (var i = 0; i < upgrades.length; i++) {
