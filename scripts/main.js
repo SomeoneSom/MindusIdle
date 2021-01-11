@@ -86,7 +86,7 @@ window.setInterval(function(){
 }, 1000);
 //building and res counts change here
 window.setInterval(function(){
-  for (var i = 0; i < 17; i++) {
+  for (var i = 0; i < 18; i++) {
     document.getElementById(i.toString(10).concat("res")).innerHTML = parseFloat(resources[Object.keys(resources)[i]].toFixed(2)).toString(10);
   }
   for (var i = 0; i < Object.keys(obj).length; i++) {
