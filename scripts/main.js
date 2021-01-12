@@ -91,7 +91,7 @@ window.setInterval(function(){
   }
   for (var i = 0; i < Object.keys(obj).length; i++) {
     document.getElementById(i.toString(10).concat("count")).innerHTML = obj[Object.keys(obj)[i]][0].toString(10);
-    for (var j = 0; j < 18; j++) {
+    for (var j = 0; j < 17; j++) {
       out = obj[Object.keys(obj)[i]][2][j];
       cost = obj[Object.keys(obj)[i]][1][j].toString(10);
       if (cost != "0") {

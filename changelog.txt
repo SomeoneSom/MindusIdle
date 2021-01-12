@@ -1,3 +1,7 @@
+v0.5.0 - 1/12/21
+	Bugs with power have been fixed
+	Added Combustion Generator
+
 v0.4.0 - 1/8/21
     Added power (WARNING: NOT TESTED)
     Removed the word "shop" from navbar
