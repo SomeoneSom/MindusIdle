@@ -30,7 +30,7 @@ for (var objct of Object.keys(JSON.parse(objj))) {
             document.getElementById(objct).innerHTML += `<span id="${i}out${j}"> 0</span> ${Object.keys(JSON.parse(resourcesj))[j].capitalize()} `;
         }
     }
-    document.getElementById(objct).innerHTML += `${(flag != 3) ? "per second."}<br /><br />
+    document.getElementById(objct).innerHTML += `${(flag != 3) ? 'per second.' : ''}<br /><br />
     Buying 1 will cost:<br /><br />`;
     for (var j = 0; j < 17; j++) {
         if (JSON.parse(objj)[objct][1][j] != 0) {
