@@ -1,3 +1,7 @@
+v0.5.3 - 1/19/21
+    Added Copper Excavator
+    Added Lead Excavator
+
 v0.5.2 - 1/19/21
     Fixed bug where power didnt update
 

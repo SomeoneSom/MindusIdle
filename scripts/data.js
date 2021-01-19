@@ -66,6 +66,22 @@ var objj = JSON.stringify({
         3,
         "Combustion Generator",
         -60
+    ],
+    "coppexca": [
+        0,
+        [250, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        0,
+        "Copper Excavator",
+        30
+    ],
+    "leadexca": [
+        0,
+        [50, 350, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        [0, 15, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+        0,
+        "Lead Excavator",
+        30
     ]
 });
 var upgradesj = JSON.stringify([
