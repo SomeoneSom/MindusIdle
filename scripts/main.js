@@ -42,6 +42,11 @@ function getNewFeatures() {
       obj[objct][i] = JSON.parse(objj)[objct][i];
     }
   }
+  for (var resn of Object.keys(JSON.parse(resourcesj))) {
+    if (typeof(resources[resn]) == "undefined") {
+      resources[resn] = JSON.parse(resourcesj)[resn];
+    }
+  }
 }
 if (typeof(window.localStorage['resources']) == "undefined") {
   wipeSave();
