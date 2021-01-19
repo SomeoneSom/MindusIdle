@@ -1,8 +1,4 @@
 var divsmain = ["res", "drshop", "crshop", "upg", "power", "land", "options"];
-var divsdr = ["mech", "leadr", "coaldr"];
-var divscr = ["graphpress"];
-var divslnd = ["duo"];
-var divspower = ["combusgen"];
 var resources;
 var obj;
 function enableDiv(divname, divs) {

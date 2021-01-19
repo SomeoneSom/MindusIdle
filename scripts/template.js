@@ -3,6 +3,7 @@ String.prototype.capitalize = function() {
     return this.charAt(0).toUpperCase() + this.slice(1);
 };
 //make all necessary anchors and divs in the correct locations for all the objs
+var divsdr = divscr = divslnd = divspower = [];
 var i = 0;
 for (var objct of Object.keys(JSON.parse(objj))) {
     var flag = JSON.parse(objj)[objct][3];
@@ -10,18 +11,22 @@ for (var objct of Object.keys(JSON.parse(objj))) {
         var divlst = "divsdr";
         var id = "drnav";
         document.getElementById('drshop').innerHTML += `<div id="${objct}"></div>`;
+        divsdr.push(objct);
     } else if (flag == 1) {
         var divlst = "divscr";
         var id = "crnav";
         document.getElementById('crshop').innerHTML += `<div id="${objct}"></div>`;
+        divscr.push(objct);
     } else if (flag == 2) {
         var divlst = "divslnd";
         var id = "lndnav"
         document.getElementById('land').innerHTML += `<div id="${objct}"></div>`;
+        divslnd.push(objct);
     } else {
         var divlst = "divspower";
         var id = "powernav";
         document.getElementById('power').innerHTML += `<div id="${objct}"></div>`;
+        divspower.push(objct);
     }
     document.getElementById(id).innerHTML += `<li><a href="javascript:enableDiv('${objct}', ${divlst})" class="${objct}">${JSON.parse(objj)[objct][4]}</a></li>`;
     document.getElementById(objct).innerHTML += `<p>You have <span id="${i}count">0</span> ${pluralize(JSON.parse(objj)[objct][4])} ${(flag != 3) ? "producing" : "."}:`;
