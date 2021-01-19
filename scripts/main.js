@@ -68,6 +68,11 @@ function buy(objc, amount) {
     }
   }
   objc[0] += 1;
+  if (objc[0] % 100 == 0 && objc[0] >= 1000 && objc[0] <= 10000) {
+    objc[2] = objc[2].map(x => x*10);
+  } else if (objc[0] % 25 == 0 && objc[0] >= 100 && objc[0] < 1000) {
+    objc[2] = objc[2].map(x => x*4);
+  }
 }
 loadSave();
 getNewFeatures();

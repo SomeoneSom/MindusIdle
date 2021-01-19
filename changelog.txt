@@ -1,3 +1,6 @@
+v0.5.1 - 1/19/21
+    Buildings now quadruple in power every 25 purchases from 100-1000, and by ten every 100 purchases from 1000-10000
+
 v0.5.0 - 1/12/21
 	Bugs with power have been fixed
 	Added Combustion Generator
