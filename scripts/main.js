@@ -1,6 +1,20 @@
 var divsmain = ["res", "drshop", "crshop", "upg", "power", "land", "options"];
 var resources;
 var obj;
+function tick(times = 1) {
+  for (var k = 0; k < times; k++) {
+    for (var i = 0; i < Object.keys(obj).length; i++) {
+      object = obj[Object.keys(obj)[i]]
+      amount = object[0];
+      for (var j = 0; j < 17; j++) {
+        if (object[5]*amount <= resources["power"]) {
+          resources[Object.keys(resources)[j]] += object[2][j] * amount;
+          resources["power"] -= object[5]*amount;
+        }
+      }
+    }
+  }
+}
 function enableDiv(divname, divs) {
   for (var j = 0; j < divs.length; j++) {
     var divtag = divs[j];
@@ -77,19 +91,14 @@ function buy(objc, amount) {
 }
 loadSave();
 getNewFeatures();
+if (!localStorage['lastAccessed']) {
+  localStorage['lastAccessed'] = Math.floor(Date.now() / 1000);
+}
+var disparity = Math.floor(Date.now() / 1000) - localStorage['lastAccessed'];
+localStorage['lastAccessed'] = Math.floor(Date.now() / 1000);
+tick(disparity);
 //nums go up here
-window.setInterval(function(){
-  for (var i = 0; i < Object.keys(obj).length; i++) {
-    object = obj[Object.keys(obj)[i]]
-    amount = object[0];
-    for (var j = 0; j < 17; j++) {
-      if (object[5]*amount <= resources["power"]) {
-        resources[Object.keys(resources)[j]] += object[2][j] * amount;
-        resources["power"] -= object[5]*amount;
-      }
-    }
-  }
-}, 1000);
+window.setInterval(tick, 1000);
 //building and res counts change here
 window.setInterval(function(){
   for (var i = 0; i < 18; i++) {
@@ -115,7 +124,7 @@ function do_func(func) {
   func();
 }
 //autosave every 30 seconds
-window.setInterval(save(), 30000);
+window.setInterval(save, 30000);
 //upgrade management
 window.setInterval(function(){
   for (var i = 0; i < upgrades.length; i++) {

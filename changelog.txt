@@ -1,3 +1,7 @@
+v0.6.0 - 1/20/21
+    Offline progress is now a thing
+    Fixed bug where it would not autosave every 30 seconds
+
 v0.5.3 - 1/19/21
     Added Copper Excavator
     Added Lead Excavator
